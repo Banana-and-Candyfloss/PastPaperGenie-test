@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pastpapergenie.co.uk/sitemap.xml

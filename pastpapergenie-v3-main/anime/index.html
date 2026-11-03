@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#203b14">
+  <title>PastPaperGenie | Anime Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="page">
+  <header>
+    <h1><a href="#">PastPaperGenie <small>v3</small></a></h1>
+    <p class="blurb">Anime Streaming Hub</p>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#anime-section">ANIME</a>
+    </nav>
+  </header>
+
+  <main style="padding-top: 16px;">
+    <!-- ANIME SECTION -->
+    <section id="anime-section">
+      <h2 class="section-title">Anime Streaming Hub</h2>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search anime title (e.g. Naruto, One Piece, Jujutsu Kaisen)...">
+        <button onclick="searchAnime()">SEARCH</button>
+      </div>
+
+      <!-- Video Player View -->
+      <div id="playerView" style="display:none; margin-bottom: 24px;">
+        <button onclick="goBack()">&larr; BACK TO LIST</button>
+
+        <h2 id="watchTitle" style="font: bold 20px Georgia, serif; color: var(--green); margin: 12px 0 6px;"></h2>
+
+        <!-- MegaPlay Source Selector (Sub / Dub) -->
+        <div class="provider-bar">
+          <strong style="font-size:11px; margin-right:4px;">SERVER:</strong>
+          <button class="provider-btn active" onclick="setSource('megaplay_sub', this)">MegaPlay (Sub)</button>
+          <button class="provider-btn" onclick="setSource('megaplay_dub', this)">MegaPlay (Dub)</button>
+        </div>
+
+        <div class="play">
+          <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+        </div>
+
+        <div class="box">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <strong>SELECT EPISODE</strong>
+            <span id="episodeCountBadge" class="small"></span>
+          </div>
+          <div id="episodeGrid" class="episodes-grid"></div>
+        </div>
+      </div>
+
+      <!-- Anime Results Grid -->
+      <div id="resultsGrid" class="grid">
+        <div style="grid-column: 1/-1; text-align:center; padding: 40px 0; color: #4a5640;">
+          Loading recommended anime...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 PASTPAPERGENIE · ALL ANIME CONTENT PROVIDED VIA EXTERNAL EMBEDS</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

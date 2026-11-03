@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1v1.LOL - pastpapergenie</title>
+<meta name="description" content="Play 1v1.LOL free in your browser on pastpapergenie.">
+<link rel="canonical" href="https://pastpapergenie.co.uk/games/1v1lol/">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body data-up="../../" data-slug="1v1lol">
+<div id="page">
+<header>
+<p class="logo"><a href="../../">pastpapergenie <small>v3</small></a></p>
+<p class="blurb">Browser games. Only ones I'm allowed to show.</p>
+<nav><a href="../../">Games</a> <a href="../../recommended/">Recommended</a> <a href="../../saved/">Saved</a> <a href="../../about/">About</a>
+<input id="q" type="search" placeholder="search titles or tags" aria-label="Search games"></nav>
+</header>
+<div id="cols"><main>
+<p class="small"><a href="../../">All games</a></p><h1>1v1.LOL</h1><div class="play"><iframe id="game-frame" src="https://pastpapergenie.co.uk/Resources/1v1lol" title="1v1.LOL" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-fullscreen" referrerpolicy="no-referrer" loading="lazy" allow="fullscreen; gamepad" allowfullscreen></iframe></div><p><button data-fav="1v1lol">save</button> <button type="button" id="fullscreen-btn">fullscreen</button> <a class="small" href="https://pastpapergenie.co.uk/Resources/1v1lol" target="_blank" rel="noopener noreferrer">open on its own page</a></p><p>Play 1v1.LOL free in your browser.</p><dl><dt>Players</dt><dd>1-2</dd><dt>Tags</dt><dd>fps</dd></dl>
+</main><aside><div class="box" id="recs"></div><div class="box" id="recent"></div></aside></div>
+<footer><p>Licence problem or takedown request: contact details are being set up and will be here soon. Saved games stay in your browser.</p></footer>
+</div>
+<script src="../../assets/games-data.js"></script>
+<script src="../../assets/app.js"></script>
+<script>
+  document.getElementById('fullscreen-btn').addEventListener('click', function() {
+    const iframe = document.getElementById('game-frame');
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) { /* Safari */
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { /* IE11 */
+      iframe.msRequestFullscreen();
+    }
+  });
+</script>
+</body>
+</html>
